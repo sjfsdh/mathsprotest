@@ -319,7 +319,7 @@ export default function AlgebraSolver() {
                             variant="outline"
                             size="sm"
                             onClick={() => handleUseExample(example.equation)}
-                            className="h-7"
+                            className="h-7 text-gray-100 border-gray-600 hover:bg-gray-800"
                           >
                             Use
                           </Button>
