@@ -261,7 +261,7 @@ export default function AlgebraSolver() {
                       <TooltipProvider>
                         <Tooltip open={copied}>
                           <TooltipTrigger asChild>
-                            <Button variant="ghost" size="icon" onClick={copyResult} className="h-8 w-8">
+                            <Button variant="outline" size="icon" onClick={copyResult} className="h-8 w-8">
                               <Copy className="h-4 w-4" />
                               <span className="sr-only">Copy result</span>
                             </Button>
