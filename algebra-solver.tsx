@@ -316,7 +316,6 @@ export default function AlgebraSolver() {
                         <div className="flex justify-between items-center">
                           <CardTitle className="text-md font-mono">{example.equation}</CardTitle>
                           <Button
-                            variant="outline"
                             size="sm"
                             onClick={() => handleUseExample(example.equation)}
                             className="h-7 text-white bg-gray-800 border-gray-700 hover:bg-gray-700"
