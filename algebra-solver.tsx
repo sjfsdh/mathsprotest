@@ -347,7 +347,7 @@ export default function AlgebraSolver() {
             </TabsContent>
           </Tabs>
         </CardContent>
-        <CardFooter className="flex flex-col items-start text-sm text-muted-foreground">
+        <CardFooter className="bg-blue-600 text-white hover:bg-blue-700 w-full py-3">
           <p>
             This solver handles basic linear equations in the form of ax + b = cx + d. For more complex equations, refer
             to the Formula Reference for guidance on solving techniques.
