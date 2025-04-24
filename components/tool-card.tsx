@@ -46,7 +46,7 @@ export function ToolCard({ tool }: ToolCardProps) {
       <CardFooter className="p-6 pt-0">
        <Button
   asChild
-  className={`w-full text-white ${color.replace("bg-", "bg-solid-").replace("dark:bg-", "dark:bg-solid-").replace("-100", "-600").replace("-950", "-600")} hover:${color.replace("bg-", "bg-solid-").replace("dark:bg-", "dark:bg-solid-").replace("-100", "-700").replace("-950", "-700")} bg-opacity-100`}
+    className={`w-full ${color.replace("bg-", "bg-").replace("dark:bg-", "dark:bg-").replace("-100", "-600").replace("-950", "-600").replace("transparent", "bg-solid")} hover:${color.replace("bg-", "bg-").replace("dark:bg-", "dark:bg-").replace("-100", "-700").replace("-950", "-700").replace("transparent", "bg-solid")} text-white`}
 >
 
 
