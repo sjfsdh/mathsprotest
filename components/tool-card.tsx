@@ -46,12 +46,25 @@ export function ToolCard({ tool }: ToolCardProps) {
       <CardFooter className="p-6 pt-0">
        <Button
   asChild
-    className={`w-full ${color.replace("bg-", "bg-").replace("dark:bg-", "dark:bg-").replace("-100", "-600").replace("-950", "-600").replace("transparent", "bg-solid")} hover:${color.replace("bg-", "bg-").replace("dark:bg-", "dark:bg-").replace("-100", "-700").replace("-950", "-700").replace("transparent", "bg-solid")} text-white`}
+  className={`w-full ${
+    color
+      .replace("bg-transparent", "bg-gray-600")
+      .replace("bg-", "bg-")
+      .replace("dark:bg-", "dark:bg-")
+      .replace("-100", "-600")
+      .replace("-950", "-600")
+  } hover:${
+    color
+      .replace("bg-transparent", "bg-gray-700")
+      .replace("bg-", "bg-")
+      .replace("dark:bg-", "dark:bg-")
+      .replace("-100", "-700")
+      .replace("-950", "-700")
+  } text-white`}
 >
+  <Link href={`/tools/${id}`}>Launch Tool</Link>
+</Button>
 
-
-          <Link href={`/tools/${id}`}>Launch Tool</Link>
-        </Button>
       </CardFooter>
     </Card>
   )
