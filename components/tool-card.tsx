@@ -44,30 +44,16 @@ export function ToolCard({ tool }: ToolCardProps) {
         <p className="text-muted-foreground">{longDescription || description}</p>
       </CardContent>
       <CardFooter className="p-6 pt-0">
-       <Button
-  asChild
-  className={`w-full ${
-    color
-      .split(" ")
-      .map((cls) =>
-        cls.includes("transparent")
-          ? cls.includes("dark:") ? "dark:bg-gray-700" : "bg-gray-600"
-          : cls.replace("-100", "-600").replace("-950", "-600")
-      )
-      .join(" ")
-  } hover:${
-    color
-      .split(" ")
-      .map((cls) =>
-        cls.includes("transparent")
-          ? cls.includes("dark:") ? "dark:bg-gray-800" : "bg-gray-700"
-          : cls.replace("-100", "-700").replace("-950", "-700")
-      )
-      .join(" ")
-  } text-white`}
->
-  <Link href={`/tools/${id}`}>Launch Tool</Link>
+      <Button asChild>
+  <a
+    href={`/tools/${id}`}
+    className={`w-full text-center ${color.replace("-100", "-600")}`}
+  >
+    Launch Tool
+  </a>
 </Button>
+
+
 
       </CardFooter>
     </Card>
