@@ -48,18 +48,22 @@ export function ToolCard({ tool }: ToolCardProps) {
   asChild
   className={`w-full ${
     color
-      .replace("bg-transparent", "bg-gray-600")
-      .replace("bg-", "bg-")
-      .replace("dark:bg-", "dark:bg-")
-      .replace("-100", "-600")
-      .replace("-950", "-600")
+      .split(" ")
+      .map((cls) =>
+        cls.includes("transparent")
+          ? cls.includes("dark:") ? "dark:bg-gray-700" : "bg-gray-600"
+          : cls.replace("-100", "-600").replace("-950", "-600")
+      )
+      .join(" ")
   } hover:${
     color
-      .replace("bg-transparent", "bg-gray-700")
-      .replace("bg-", "bg-")
-      .replace("dark:bg-", "dark:bg-")
-      .replace("-100", "-700")
-      .replace("-950", "-700")
+      .split(" ")
+      .map((cls) =>
+        cls.includes("transparent")
+          ? cls.includes("dark:") ? "dark:bg-gray-800" : "bg-gray-700"
+          : cls.replace("-100", "-700").replace("-950", "-700")
+      )
+      .join(" ")
   } text-white`}
 >
   <Link href={`/tools/${id}`}>Launch Tool</Link>
