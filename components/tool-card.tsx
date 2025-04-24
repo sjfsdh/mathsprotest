@@ -44,17 +44,14 @@ export function ToolCard({ tool }: ToolCardProps) {
         <p className="text-muted-foreground">{longDescription || description}</p>
       </CardContent>
       <CardFooter className="p-6 pt-0">
-      <Button asChild>
-  <a
-    href={`/tools/${id}`}
-    className={`w-full text-center ${color.replace("-100", "-600")}`}
-  >
-    Launch Tool
-  </a>
-</Button>
-
-
-
+        <Button asChild>
+          <a
+            href={`/tools/${id}`}
+            className={`w-full text-center py-2 px-4 rounded-md text-white ${color.replace("-100", "-600").replace("-950", "-600")} hover:${color.replace("-100", "-700").replace("-950", "-700")}`}
+          >
+            Launch Tool
+          </a>
+        </Button>
       </CardFooter>
     </Card>
   )
