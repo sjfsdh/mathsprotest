@@ -46,8 +46,11 @@ export function ToolCard({ tool }: ToolCardProps) {
       <CardFooter className="p-6 pt-0">
         <Button
   asChild
-  className={`w-full ${color} hover:brightness-90 text-white dark:text-white bg-opacity-100`}
+  className={`w-full ${color} !bg-opacity-100 text-white hover:brightness-90`}
 >
+  <Link href={`/tools/${id}`}>Launch Tool</Link>
+</Button>
+
   <Link href={`/tools/${id}`}>Launch Tool</Link>
 </Button>
 
